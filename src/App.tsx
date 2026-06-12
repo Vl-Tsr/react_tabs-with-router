@@ -16,20 +16,26 @@ export const App = () => {
       >
         <div className="container">
           <div className="navbar-brand">
-            <div
-              className={cn('navbar-item', {
-                'is-active': pathname === '/',
-              })}
-            >
-              <Link to="/">Home</Link>
+            <div className="navbar-item">
+              <Link
+                to="/"
+                className={cn({
+                  'is-active': pathname === '/',
+                })}
+              >
+                Home
+              </Link>
             </div>
 
-            <div
-              className={cn('navbar-item', {
-                'is-active': pathname.startsWith('/tabs'),
-              })}
-            >
-              <Link to="/tabs">Tabs</Link>
+            <div className="navbar-item">
+              <Link
+                to="/tabs"
+                className={cn({
+                  'is-active': pathname.startsWith('/tabs'),
+                })}
+              >
+                Tabs
+              </Link>
             </div>
           </div>
         </div>
